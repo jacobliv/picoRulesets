@@ -1,0 +1,9 @@
+ruleset twillo_Keys {
+  meta {
+    key twilio {
+          "account_sid": "<your account SID here>", 
+          "auth_token" : "<your auth token here>"
+    }
+    provides keys twilio to use_twilio
+  }
+}
