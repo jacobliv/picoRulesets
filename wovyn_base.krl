@@ -8,7 +8,7 @@ ruleset wovyn_base {
     rule hearbeat {
         select when wovyn heartbeat
         pre {
-            genericThing = event:attr("genericThing").klog("Data: ")
+            genericThing = event:attr("genericThing").extract(re#/^[0-9]+(\\.[0-9]+)?$#).klog("Data: ")
         }
     }
 }
