@@ -8,7 +8,7 @@ ruleset wovyn_base {
     rule hearbeat {
         select when wovyn heartbeat
         pre {
-            genericThing = event:attr("genericThing").get("data","temperature").klog("Data: ")
+            genericThing = event:attr("genericThing").get("data","temperature")[0].klog("Data: ")
         }
     }
 }
